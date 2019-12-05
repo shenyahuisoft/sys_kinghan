@@ -1,0 +1,16 @@
+D:\XSKCollection\xsk_gysx\Entity\bin\Debug\Entity.dll
+D:\XSKCollection\xsk_gysx\Entity\bin\Debug\Entity.pdb
+D:\XSKCollection\xsk_gysx\Entity\bin\Debug\DatabaseLayer.dll
+D:\XSKCollection\xsk_gysx\Entity\bin\Debug\DatabaseLayer.pdb
+D:\XSKCollection\xsk_gysx\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+D:\XSKCollection\xsk_gysx\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+D:\XSKCollection\xsk_gysx\Entity\obj\Debug\Entity.csproj.CopyComplete
+D:\XSKCollection\xsk_gysx\Entity\obj\Debug\Entity.dll
+D:\XSKCollection\xsk_gysx\Entity\obj\Debug\Entity.pdb
+E:\百年\sourceCode\sys_kinghan\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+E:\百年\sourceCode\sys_kinghan\Entity\obj\Debug\Entity.dll
+E:\百年\sourceCode\sys_kinghan\Entity\obj\Debug\Entity.pdb
+E:\百年\sourceCode\sys_kinghan\Entity\bin\Debug\Entity.dll
+E:\百年\sourceCode\sys_kinghan\Entity\bin\Debug\Entity.pdb
+E:\百年\sourceCode\sys_kinghan\Entity\bin\Debug\DatabaseLayer.dll
+E:\百年\sourceCode\sys_kinghan\Entity\obj\Debug\Entity.csproj.CopyComplete

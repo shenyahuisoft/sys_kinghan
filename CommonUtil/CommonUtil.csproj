@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5881DEC4-4FC0-497B-AE5F-5C1FC3014944}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonUtil</RootNamespace>
+    <AssemblyName>CommonUtil</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="O2S.Components.PDFRender4NET, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\O2S.Components.PDFRender4NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassReflection.cs" />
+    <Compile Include="CommonException.cs" />
+    <Compile Include="Convert\ConnectArrray.cs" />
+    <Compile Include="Convert\ConvertArrayList.cs" />
+    <Compile Include="Convert\ConvertBase64.cs" />
+    <Compile Include="Convert\ConvertBytes.cs" />
+    <Compile Include="Convert\ConvertDataRow.cs" />
+    <Compile Include="Convert\ConvertDataTable.cs" />
+    <Compile Include="Convert\ConvertDateTime.cs" />
+    <Compile Include="Convert\ConvertHTML.cs" />
+    <Compile Include="Convert\ConvertIList.cs" />
+    <Compile Include="Convert\ConvertObject.cs" />
+    <Compile Include="Convert\ConvertBitmap.cs" />
+    <Compile Include="Convert\ConvertStream.cs" />
+    <Compile Include="Convert\ConvertString.cs" />
+    <Compile Include="Convert\ConvertXML.cs" />
+    <Compile Include="DataFormatHelper.cs" />
+    <Compile Include="DataTableEx.cs" />
+    <Compile Include="DataTableQuery.cs" />
+    <Compile Include="DateHelper.cs" />
+    <Compile Include="EncryptHelper.cs" />
+    <Compile Include="EncryptTools.cs" />
+    <Compile Include="ExcelHelper.cs" />
+    <Compile Include="ExcelHelper_Old.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FileConvert.cs" />
+    <Compile Include="FileHelper.cs" />
+    <Compile Include="HttpClientHelper.cs" />
+    <Compile Include="ImportExcel.cs" />
+    <Compile Include="JSONHelper.cs" />
+    <Compile Include="KdApiSearch.cs" />
+    <Compile Include="KVPair.cs" />
+    <Compile Include="LatLngTransition.cs" />
+    <Compile Include="MailHelper.cs" />
+    <Compile Include="NewID.cs" />
+    <Compile Include="PdfTools.cs" />
+    <Compile Include="PictureTools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QrCodeHelper.cs" />
+    <Compile Include="RandomLetters.cs" />
+    <Compile Include="ReturnJson.cs" />
+    <Compile Include="RSAHelper.cs" />
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include="SystemExtend.cs" />
+    <Compile Include="TypeHelper.cs" />
+    <Compile Include="UnZipDir.cs" />
+    <Compile Include="UploadFileHelper.cs" />
+    <Compile Include="ValidateCode.cs" />
+    <Compile Include="VerifyCode.cs" />
+    <Compile Include="WebHelper.cs" />
+    <Compile Include="HtmlDomTools.cs" />
+    <Compile Include="ZipHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages\O2S.Components.PDFRender4NET.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

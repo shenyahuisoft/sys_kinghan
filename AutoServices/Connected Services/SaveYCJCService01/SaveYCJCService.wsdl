@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:ns2="http://exception.common.dekn.com.cn" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:tns="http://service.tblycjc.webservice.client.dekn.com.cn" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://lang.java" targetNamespace="http://service.tblycjc.webservice.client.dekn.com.cn" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.tblycjc.webservice.client.dekn.com.cn">
+      <xsd:element name="saveYCJC">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="saveYCJCResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DataAccessException" type="ns2:DataAccessException" />
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://exception.common.dekn.com.cn">
+      <xsd:complexType name="DataAccessException">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="cause" nillable="true" type="ns1:Throwable" />
+          <xsd:element minOccurs="0" name="define" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="message" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="position" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="realm" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://lang.java">
+      <xsd:complexType name="Throwable" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="DataAccessException">
+    <wsdl:part name="DataAccessException" element="tns:DataAccessException" />
+  </wsdl:message>
+  <wsdl:message name="saveYCJCRequest">
+    <wsdl:part name="parameters" element="tns:saveYCJC" />
+  </wsdl:message>
+  <wsdl:message name="saveYCJCResponse">
+    <wsdl:part name="parameters" element="tns:saveYCJCResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SaveYCJCServicePortType">
+    <wsdl:operation name="saveYCJC">
+      <wsdl:input name="saveYCJCRequest" message="tns:saveYCJCRequest" />
+      <wsdl:output name="saveYCJCResponse" message="tns:saveYCJCResponse" />
+      <wsdl:fault name="DataAccessException" message="tns:DataAccessException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SaveYCJCServiceHttpBinding" type="tns:SaveYCJCServicePortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="saveYCJC">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="saveYCJCRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="saveYCJCResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DataAccessException">
+        <wsdlsoap:fault use="literal" name="DataAccessException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SaveYCJCService">
+    <wsdl:port name="SaveYCJCServiceHttpPort" binding="tns:SaveYCJCServiceHttpBinding">
+      <wsdlsoap:address location="http://222.143.135.23:8686/jzsanitate/services/SaveYCJCService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

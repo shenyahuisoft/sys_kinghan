@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Logrila.Logging</id>
+    <version>1.0.3.0</version>
+    <title>Logrila.Logging</title>
+    <authors>Dennis Gao</authors>
+    <owners>Dennis Gao</owners>
+    <licenseUrl>https://github.com/gaochundong/Logrila/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/gaochundong/Logrila</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Logrila is a simple logging adapter.</description>
+    <copyright>Copyright © 2015-2016 Dennis Gao.</copyright>
+  </metadata>
+</package>

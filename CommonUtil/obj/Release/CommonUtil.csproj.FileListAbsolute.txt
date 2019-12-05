@@ -1,0 +1,17 @@
+D:\XSKCollection\xsk_gysx\CommonUtil\bin\Release\CommonUtil.dll
+D:\XSKCollection\xsk_gysx\CommonUtil\bin\Release\CommonUtil.pdb
+D:\XSKCollection\xsk_gysx\CommonUtil\bin\Release\Gma.QrCodeNet.Encoding.dll
+D:\XSKCollection\xsk_gysx\CommonUtil\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\XSKCollection\xsk_gysx\CommonUtil\bin\Release\NPOI.dll
+D:\XSKCollection\xsk_gysx\CommonUtil\bin\Release\NPOI.OOXML.dll
+D:\XSKCollection\xsk_gysx\CommonUtil\bin\Release\NPOI.OpenXml4Net.dll
+D:\XSKCollection\xsk_gysx\CommonUtil\bin\Release\NPOI.OpenXmlFormats.dll
+D:\XSKCollection\xsk_gysx\CommonUtil\bin\Release\O2S.Components.PDFRender4NET.dll
+D:\XSKCollection\xsk_gysx\CommonUtil\bin\Release\Gma.QrCodeNet.Encoding.pdb
+D:\XSKCollection\xsk_gysx\CommonUtil\bin\Release\Gma.QrCodeNet.Encoding.xml
+D:\XSKCollection\xsk_gysx\CommonUtil\bin\Release\NPOI.xml
+D:\XSKCollection\xsk_gysx\CommonUtil\obj\Release\CommonUtil.csprojAssemblyReference.cache
+D:\XSKCollection\xsk_gysx\CommonUtil\obj\Release\CommonUtil.csproj.CoreCompileInputs.cache
+D:\XSKCollection\xsk_gysx\CommonUtil\obj\Release\CommonUtil.csproj.CopyComplete
+D:\XSKCollection\xsk_gysx\CommonUtil\obj\Release\CommonUtil.dll
+D:\XSKCollection\xsk_gysx\CommonUtil\obj\Release\CommonUtil.pdb

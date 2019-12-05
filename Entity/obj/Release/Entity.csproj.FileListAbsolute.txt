@@ -1,0 +1,9 @@
+D:\XSKCollection\xsk_gysx\Entity\bin\Release\Entity.dll
+D:\XSKCollection\xsk_gysx\Entity\bin\Release\Entity.pdb
+D:\XSKCollection\xsk_gysx\Entity\bin\Release\DatabaseLayer.dll
+D:\XSKCollection\xsk_gysx\Entity\bin\Release\DatabaseLayer.pdb
+D:\XSKCollection\xsk_gysx\Entity\obj\Release\Entity.csprojAssemblyReference.cache
+D:\XSKCollection\xsk_gysx\Entity\obj\Release\Entity.csproj.CoreCompileInputs.cache
+D:\XSKCollection\xsk_gysx\Entity\obj\Release\Entity.csproj.CopyComplete
+D:\XSKCollection\xsk_gysx\Entity\obj\Release\Entity.dll
+D:\XSKCollection\xsk_gysx\Entity\obj\Release\Entity.pdb

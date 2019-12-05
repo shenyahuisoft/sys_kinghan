@@ -1,0 +1,83 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+  <dataConnection>
+    <dataSource name="sys_kinghan" type="MSSqlServer">
+      <parameter name="Data Source" value="." />
+      <parameter name="Initial Catalog" value="CDData" />
+      <parameter name="User ID" value="sa" />
+      <parameter name="Password" value="1qaz!QAZ!" />
+      <parameter name="Encrypt" value="" />
+    </dataSource>
+
+    <dataSource name="sys_environmentServer" type="MSSqlServer">
+      <parameter name="Data Source" value="." />
+      <parameter name="Initial Catalog" value="environmentServer" />
+      <parameter name="User ID" value="sa" />
+      <parameter name="Password" value="1qaz!QAZ!" />
+      <parameter name="Encrypt" value="" />
+    </dataSource>
+
+  </dataConnection>
+
+  <!--enabled 1为可用 0为禁用-->
+  <WebServiceUrls>
+    <url key="Service_KF" remark="开封" value = "http://221.176.156.141:8686/kfsanitate" enabled="1"/>
+    <url key="Service_RZ" remark="汝州" value = "http://120.194.157.165:8686/rzsanitate" enabled="1"/>
+    <url key="Service_JZ" remark="焦作" value = "http://222.143.135.23:8686/jzsanitate" enabled="1"/>
+    <url key="Service_LH" remark="漯河" value = "http://117.159.84.133:8686/lhsanitate" enabled="1"/>
+    <url key="Service_GS" remark="固始" value = "http://61.163.38.30:8686/gssanitate" enabled="1"/>
+    <url key="Service_HB" remark="鹤壁" value = "http://222.88.186.189:8686/hbsanitate" enabled="1"/>
+  </WebServiceUrls>
+
+  <dataTransfer>
+
+    <!--此处配置数据同步任务参数信息========================================================-->
+
+    <!--同步打卡信息-->
+    <task name="AttendanceInfoSyscTask" type="program" enabled="0">
+      <!--4:00:00 此处只需要指定classname即可 无需指定 dllname,frequency（周期）:monthly、weekly、daily、hourly、minutly-->
+      <parameter name="plan" frequency="minutly" time="0:0:9"
+                 classname="AutoServices.JobTask.AttendanceInfoSyscTask" />
+      <parameter name="source" datasource="sys_kinghan" />
+    </task>
+
+    <!--工人信息上传-->
+    <task name="WorkerInfoSyscTask" type="program" enabled="0">
+      <!--4:00:00 此处只需要指定classname即可 无需指定 dllname,frequency（周期）:monthly、weekly、daily、hourly、minutly-->
+      <parameter name="plan" frequency="minutly" time="00:00:11"
+                 classname="AutoServices.JobTask.WorkerInfoSyscTask" />
+      <parameter name="source" datasource="sys_kinghan" />
+    </task>
+
+    <!--扬尘监控-->
+    <task name="UpLoadSaveYCJCTask" type="program" enabled="0">
+      <!--4:00:00 此处只需要指定classname即可 无需指定 dllname,frequency（周期）:monthly、weekly、daily、hourly、minutly-->
+      <parameter name="plan" frequency="minutly" time="00:00:00,30"
+                 classname="AutoServices.JobTask.UpLoadSaveYCJCTask" />
+      <parameter name="source" datasource="sys_environmentServer" />
+    </task>
+
+    <!--扬尘监控山西-->
+    <task name="DustMonitoringTask" type="program" enabled="0">
+      <!--4:00:00 此处只需要指定classname即可 无需指定 dllname,frequency（周期）:monthly、weekly、daily、hourly、minutly-->
+      <parameter name="plan" frequency="hourly" time="00:00,05,10,15,20,25,30,35,40,45,50,55:00"
+                 classname="AutoServices.JobTask.DustMonitoringTask" />
+      <parameter name="source" datasource="sys_environmentServer" />
+    </task>
+
+
+    <!--开封扬尘上传-->
+    <task name="MonitoringPollutantsTask" type="program" enabled="1">
+      <!--4:00:00 此处只需要指定classname即可 无需指定 dllname,frequency（周期）:monthly、weekly、daily、hourly、minutly-->
+      <parameter name="plan" frequency="hourly" time="00:00,05,10,15,20,25,30,35,40,45,50,55:00"
+                 classname="AutoServices.JobTask.MonitoringPollutantsTask" />
+      <parameter name="source" datasource="sys_environmentServer" />
+    </task>
+    <!--此处配置数据同步任务参数信息========================================================-->
+
+
+
+
+  </dataTransfer>
+
+</configuration>

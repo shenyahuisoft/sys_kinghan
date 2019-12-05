@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+  <dataConnection>
+    <dataSource name="sys_kinghan" type="MSSqlServer">
+      <parameter name="Data Source" value="." />
+      <parameter name="Initial Catalog" value="CDData" />
+      <parameter name="User ID" value="sa" />
+      <parameter name="Password" value="1qaz!QAZ!" />
+      <parameter name="Encrypt" value="" />
+    </dataSource>
+  </dataConnection>
+
+  <dataTransfer>
+
+    <!--此处配置数据同步任务参数信息========================================================-->
+    <!--同步工人信息-->
+    <task name="WorkerInfoSyscTask" type="program">
+      <!--03:00:00 此处只需要指定classname即可 无需指定 dllname,frequency（周期）:monthly、weekly、daily、hourly、minutly-->
+      <parameter name="plan" datasource="sys_kinghan" frequency="daily" time="11:40:00"
+                 classname="AutoServices.JobTask.WorkerInfoSyscTask" />
+      <parameter name="source" datasource="sys_kinghan" />
+    </task>
+
+    <!--同步打卡信息-->
+    <task name="AttendanceInfoSyscTask" type="program">
+      <!--4:00:00 此处只需要指定classname即可 无需指定 dllname,frequency（周期）:monthly、weekly、daily、hourly、minutly-->
+      <parameter name="plan" datasource="sys_kinghan" frequency="daily" time="11:40:00"
+                 classname="AutoServices.JobTask.AttendanceInfoSyscTask" />
+      <parameter name="source" datasource="sys_kinghan" />
+    </task>
+    <!--此处配置数据同步任务参数信息========================================================-->
+    
+  </dataTransfer>
+
+</configuration>
