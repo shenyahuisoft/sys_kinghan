@@ -42,7 +42,7 @@ namespace AutoServices.JobTask
 
 		                WHERE deviceAddress IN(SELECT deviceAddress FROM TransToType WHERE transTo1 = '9')
 	                ) AS A
-	                ) AS B WHERE RowNumber = 1 -- AND deviceAddress ='11004'  '11018' '11036' 
+	                ) AS B WHERE RowNumber = 1 -- AND deviceAddress ='11004'  '11018' '11036'
                 ) AS C LEFT JOIN TransToType ON C.deviceAddress = TransToType.deviceAddress
                 ";
 
