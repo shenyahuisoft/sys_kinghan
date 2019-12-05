@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoServices.exe" size="112112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoServices.exe" size="110576">
       <assemblyIdentity name="AutoServices" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NCMjjONRpfdmV8bIh+8x2DACqU4EhhKiS+3W6Q2IJMY=</dsig:DigestValue>
+        <dsig:DigestValue>UUKSehHGmag248/Lx73ZLYHoDZBvETgqMocxRbQ3FGo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -290,13 +290,13 @@
       <dsig:DigestValue>CvMyXVqdkjvcxGv/cYYpmMWdS6y7Fp7+c3GIQOc/y6U=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="DataTransfer.xml" size="4681" writeableType="applicationData">
+  <file name="DataTransfer.xml" size="4182" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>chkwROmEivzR851hsbIdNuBPQC7wBIInpo5zkhbcUiI=</dsig:DigestValue>
+      <dsig:DigestValue>fm0fJ+9injV+ozANj1IGq94SeHTQFzoWVmIC4WkWhlY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ReadMe.txt" size="138">
