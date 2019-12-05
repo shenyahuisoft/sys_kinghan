@@ -94,7 +94,7 @@ namespace AutoServices.Services
                 }
             } while (true);
 
-            //_log.InfoFormat("{0}{1} MonitoringPollutantsTask 数据上传完成 设备号：{2}", DateTime.Now, Environment.NewLine, _baseDataModel.deviceAddress);
+            _log.InfoFormat("{0}{1} MonitoringPollutantsTask 数据上传完成 设备号：{2}", DateTime.Now, Environment.NewLine, _baseDataModel.deviceAddress);
             _client.Close();
             _client.Dispose();
         }

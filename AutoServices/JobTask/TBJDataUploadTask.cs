@@ -12,6 +12,9 @@ using CommonUtil;
 
 namespace AutoServices.JobTask
 {
+    /// <summary>
+    /// 特必佳扬尘上传
+    /// </summary>
     public class TBJDataUploadTask : BaseJob<TBJDataUploadTask>
     {
         public override void ExecuteProgramJob(SourceTaskItem sourceTask, LogTaskItem logTask)
