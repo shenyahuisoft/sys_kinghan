@@ -121,6 +121,7 @@
     <Compile Include="JobTask\AttendanceInfoSyscTask .cs" />
     <Compile Include="JobTask\DustMonitoringTask.cs" />
     <Compile Include="JobTask\MonitoringPollutantsTask.cs" />
+    <Compile Include="JobTask\TBJDataUploadTask.cs" />
     <Compile Include="JobTask\UpLoadSaveYCJCTask.cs" />
     <Compile Include="JobTask\WorkerInfoSyscTask.cs" />
     <Compile Include="Models\DataBaseSupper.cs" />

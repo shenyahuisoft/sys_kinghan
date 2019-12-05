@@ -71,8 +71,16 @@ namespace AutoServices.Services
             RequstModel requstModel = new RequstModel();
             string resultStr = requstModel.ToString(new DataModel()
             {
-                TerminalNumber = "909232393",
-                DeviceAddress = "11018"
+                Humidity = _baseDataModel.humidity,
+                Noise = _baseDataModel.noise,
+                PM10 = _baseDataModel.PM10,
+                PM25 = _baseDataModel.PM25,
+                Temperature = _baseDataModel.temperature,
+                WindDirection = _baseDataModel.windDirection,
+                WindSpeed = _baseDataModel.windSpeed,
+
+                TerminalNumber = _baseDataModel.deviceAddress,
+                DeviceAddress = _baseDataModel.deviceAddress
             });
             byte[] sendData = Encoding.ASCII.GetBytes(resultStr);
             tcpSend(sendData);

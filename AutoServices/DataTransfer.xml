@@ -73,6 +73,14 @@
                  classname="AutoServices.JobTask.MonitoringPollutantsTask" />
       <parameter name="source" datasource="sys_environmentServer" />
     </task>
+
+    <!--特必佳扬尘上传-->
+    <task name="TBJDataUploadTask" type="program" enabled="1">
+      <!--4:00:00 此处只需要指定classname即可 无需指定 dllname,frequency（周期）:monthly、weekly、daily、hourly、minutly-->
+      <parameter name="plan" frequency="hourly" time="00:02,07,12,17,22,27,32,37,42,47,52,57:00"
+                 classname="AutoServices.JobTask.TBJDataUploadTask" />
+      <parameter name="source" datasource="sys_environmentServer" />
+    </task>
     <!--此处配置数据同步任务参数信息========================================================-->
 
 
