@@ -2,11 +2,11 @@
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\enterprise\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
  <Targets>
-  <Target Name="E:\百年\sourceCode\sys_kinghan_20190814\Cowboy.Sockets\bin\Debug\Cowboy.Sockets.dll">
+  <Target Name="E:\百年\sourceCode\sys_kinghan_git\Cowboy.Sockets\bin\Debug\Cowboy.Sockets.dll">
    <Modules>
     <Module Name="cowboy.sockets.dll">
      <Messages>
-      <Message TypeName="MarkAssembliesWithAssemblyVersion" Category="Microsoft.Design" CheckId="CA1016" Status="Active" Created="2019-12-05 07:35:48Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithAssemblyVersion" Category="Microsoft.Design" CheckId="CA1016" Status="Active" Created="2019-12-05 07:54:43Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Error">向 'Cowboy.Sockets.dll' 中添加 AssemblyVersion 特性。</Issue>
       </Message>
      </Messages>
@@ -15,14 +15,14 @@
        <Types>
         <Type Name="SaeaPool" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2019-12-05 07:35:48Z" FixCategory="DependsOnFix">
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2019-12-05 07:54:43Z" FixCategory="DependsOnFix">
            <Issue Certainty="90" Level="Error">'SaeaPool' 被标记为 ComVisible(true)，但在其对象层次结构中具有下列 ComVisible(false) 类型: 'ObjectPool&lt;SaeaAwaitable&gt;'</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="SessionPool" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2019-12-05 07:35:48Z" FixCategory="DependsOnFix">
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2019-12-05 07:54:43Z" FixCategory="DependsOnFix">
            <Issue Certainty="90" Level="Error">'SessionPool' 被标记为 ComVisible(true)，但在其对象层次结构中具有下列 ComVisible(false) 类型: 'ObjectPool&lt;TcpSocketSaeaSession&gt;'</Issue>
           </Message>
          </Messages>

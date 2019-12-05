@@ -13,3 +13,9 @@ E:\百年\sourceCode\sys_kinghan_20190814\Logrila.Logging\bin\Debug\Logrila.Logg
 E:\百年\sourceCode\sys_kinghan_20190814\Logrila.Logging\obj\Debug\Logrila.Logging.csproj.CoreCompileInputs.cache
 E:\百年\sourceCode\sys_kinghan_20190814\Logrila.Logging\obj\Debug\Logrila.Logging.dll
 E:\百年\sourceCode\sys_kinghan_20190814\Logrila.Logging\obj\Debug\Logrila.Logging.pdb
+E:\百年\sourceCode\sys_kinghan_git\Logrila.Logging\bin\Debug\Logrila.Logging.dll
+E:\百年\sourceCode\sys_kinghan_git\Logrila.Logging\bin\Debug\Logrila.Logging.pdb
+E:\百年\sourceCode\sys_kinghan_git\Logrila.Logging\obj\Debug\Logrila.Logging.csprojAssemblyReference.cache
+E:\百年\sourceCode\sys_kinghan_git\Logrila.Logging\obj\Debug\Logrila.Logging.csproj.CoreCompileInputs.cache
+E:\百年\sourceCode\sys_kinghan_git\Logrila.Logging\obj\Debug\Logrila.Logging.dll
+E:\百年\sourceCode\sys_kinghan_git\Logrila.Logging\obj\Debug\Logrila.Logging.pdb
