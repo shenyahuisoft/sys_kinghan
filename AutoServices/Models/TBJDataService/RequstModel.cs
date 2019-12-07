@@ -46,7 +46,7 @@ namespace AutoServices.Models.TBJDataService
         {
             DataModel = dataModel;
             DataModelStr = DataModel.ToString();
-            DataLength = DataModelStr.Length.ToString();
+            DataLength = DataModelStr.Length.ToString().PadLeft(3, '0');
 
             return string.Format("{0}{1}{2}{3}", Header, DataLength, DataModelStr, LastData);
         }

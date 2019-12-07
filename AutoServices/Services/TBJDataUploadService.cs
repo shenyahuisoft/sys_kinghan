@@ -38,7 +38,8 @@ namespace AutoServices.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine(string.Format("TBJDataUpload：TCP server Exception {0}.", ex.Message));
+                _log.InfoFormat("{0}{1} TBJDataUpload：TCP server Exception {2}.", DateTime.Now, Environment.NewLine, ex.Message);
+                //Console.WriteLine(string.Format("TBJDataUpload：TCP server Exception {0}.", ex.Message));
             }
 
         }
@@ -56,9 +57,10 @@ namespace AutoServices.Services
 
         private void client_ServerDataReceived(object sender, TcpServerDataReceivedEventArgs e)
         {
-            string dataStr = BitConverter.ToString(e.Data, e.DataOffset, e.DataLength).Replace("-", " ");
+            //string dataStr = BitConverter.ToString(e.Data, e.DataOffset, e.DataLength).Replace("-", " ");
 
             string resultStr = Encoding.ASCII.GetString(e.Data, e.DataOffset, e.DataLength);
+            _log.InfoFormat("{0}{1} TBJDataUpload：返回结果: {2}.", DateTime.Now, Environment.NewLine, resultStr);
 
             isEnd = true;
         }
