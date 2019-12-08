@@ -87,16 +87,24 @@ namespace AutoServices.Services
             byte[] sendData = Encoding.ASCII.GetBytes(resultStr);
             tcpSend(sendData);
 
+            int tryTimes = 0;
             do
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 if (isEnd)
                 {
                     break;
                 }
+                if (tryTimes >= 6)
+                {
+                    _client.Close();
+                    _log.InfoFormat("{0}{1} TBJDataUploadService 设备号：{2} 服务器响应超时链接已断开", DateTime.Now, Environment.NewLine, _baseDataModel.deviceAddress);
+                    break;
+                }
+                tryTimes++;
             } while (true);
 
-            _log.InfoFormat("{0}{1} MonitoringPollutantsTask 数据上传完成 设备号：{2}", DateTime.Now, Environment.NewLine, _baseDataModel.deviceAddress);
+            _log.InfoFormat("{0}{1} TBJDataUploadService 数据上传完成 设备号：{2}", DateTime.Now, Environment.NewLine, _baseDataModel.deviceAddress);
             _client.Close();
             _client.Dispose();
         }

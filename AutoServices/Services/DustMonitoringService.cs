@@ -150,6 +150,7 @@ namespace AutoServices.Services
 
             string data = "{\"DeviceId\":\"" + baseDataModel.deviceAddress + "\"}";
             sendDataMethod(data, CMDCode.Register);
+            int tryTimes = 0;
             do
             {
                 Thread.Sleep(500);
@@ -157,6 +158,13 @@ namespace AutoServices.Services
                 {
                     break;
                 }
+                if (tryTimes >= 6)
+                {
+                    _client.Close();
+                    _log.InfoFormat("{0}{1} DustMonitoringService 设备号：{2} 服务器响应超时链接已断开", DateTime.Now, Environment.NewLine, baseDataModel.deviceAddress);
+                    break;
+                }
+                tryTimes++;
             } while (true);
 
             _client.Close();
