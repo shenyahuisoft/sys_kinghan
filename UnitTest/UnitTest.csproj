@@ -72,6 +72,10 @@
       <Project>{31d6e381-796c-477e-9769-f3b9ed9e81fd}</Project>
       <Name>AutoServices</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Cowboy.Sockets\Cowboy.Sockets.csproj">
+      <Project>{39D916FE-2C09-47AB-A5A2-1A23787F20BA}</Project>
+      <Name>Cowboy.Sockets</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

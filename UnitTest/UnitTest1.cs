@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using AutoServices.Common;
 using AutoServices.Models;
 using AutoServices.Models.MonitoringPollutants;
 using AutoServices.Models.SaveYCJCService;
 using AutoServices.Services;
+using Cowboy.Sockets;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 
@@ -58,24 +61,25 @@ namespace UnitTest
             //string result = CRC.ToCRC16(inputStr, Encoding.ASCII, false);
 
             //Console.WriteLine(result);
-            BaseDataModel _baseDataModel = new BaseDataModel() {
-                dataTime=DateTime.Now,
-                deviceAddress="11056",
-                humidity="12",
-                ID=12,
-                latitude= "114.213452",
-                longitude= "34.232157",
-                noise="12",
-                PM10="12",
-                PM25="12",
-                sensorCount="12",
-                temperature="12",
-                transCode="12",
-                transTo="12",
-                TSP="12",
-                windDirection="12",
-                windPower="12",
-                windSpeed="12"
+            BaseDataModel _baseDataModel = new BaseDataModel()
+            {
+                dataTime = DateTime.Now,
+                deviceAddress = "11056",
+                humidity = "12",
+                ID = 12,
+                latitude = "114.213452",
+                longitude = "34.232157",
+                noise = "12",
+                PM10 = "12",
+                PM25 = "12",
+                sensorCount = "12",
+                temperature = "12",
+                transCode = "12",
+                transTo = "12",
+                TSP = "12",
+                windDirection = "12",
+                windPower = "12",
+                windSpeed = "12"
             };
 
             RequstModel requstModel = new RequstModel();
@@ -122,11 +126,63 @@ namespace UnitTest
         {
             //MonitoringPollutantsService monitoringPollutantsService = new MonitoringPollutantsService();
             //monitoringPollutantsService.UploadNoiseData();
+        }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [TestMethod]
+        public void TCPServerTest()
+        {
+            Task.Run(() =>
+            {
+
+                var config = new TcpSocketServerConfiguration();
+                config.FrameBuilder = new RawBufferFrameBuilder();
+                try
+                {
+                    int listenedPort = 22222;
+
+                    TcpSocketServer _server = new TcpSocketServer(listenedPort, config);
+                    _server.ClientConnected += _server_ClientConnected;
+                    _server.ClientDisconnected += _server_ClientDisconnected; ;
+                    _server.ClientDataReceived += _server_ClientDataReceived; ;
+                    _server.Listen();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            });
+            while (true)
+            {
+                Thread.Sleep(1000);
+            }
 
         }
 
+        private void _server_ClientDataReceived(object sender, TcpClientDataReceivedEventArgs e)
+        {
+            //throw new NotImplementedException();
+            string dataStr = BitConverter.ToString(e.Data, e.DataOffset, e.DataLength).Replace("-", " ");
 
+            //Encoding.ASCII.GetString(e.Data, e.DataOffset, e.DataLength);
+            string resultStr = Encoding.Default.GetString(e.Data, e.DataOffset, e.DataLength);
+            Console.WriteLine(dataStr);
+            //string resultStr = "接收成功";
+            e.Session.Send(Encoding.Default.GetBytes(resultStr));
+        }
+
+        private void _server_ClientDisconnected(object sender, TcpClientDisconnectedEventArgs e)
+        {
+            //throw new NotImplementedException();
+            Console.WriteLine(string.Format("{0}ClientDisconnected", e.Session.SessionKey));
+        }
+
+        private void _server_ClientConnected(object sender, TcpClientConnectedEventArgs e)
+        {
+            Console.WriteLine(string.Format("{0}ClientConnected", e.Session.SessionKey));
+        }
     }
 
 

@@ -121,10 +121,8 @@ E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\Quartz.dll
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\Cowboy.Sockets.dll
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\HttpHelper.dll
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\Common.Logging.Core.dll
-E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\log4net.dll
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\CommonUtil.dll
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\Common.Logging.dll
-E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\Topshelf.Log4Net.dll
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\Logrila.Logging.dll
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\NPOI.dll
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\NPOI.OOXML.dll
@@ -143,7 +141,6 @@ E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\Quartz.xml
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\Cowboy.Sockets.pdb
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\Common.Logging.Core.pdb
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\Common.Logging.Core.xml
-E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\log4net.xml
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\CommonUtil.pdb
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\Common.Logging.pdb
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\Common.Logging.xml
@@ -155,3 +152,6 @@ E:\百年\sourceCode\sys_kinghan_git\UnitTest\obj\Debug\UnitTest.csproj.CoreComp
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\obj\Debug\UnitTest.csproj.CopyComplete
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\obj\Debug\UnitTest.dll
 E:\百年\sourceCode\sys_kinghan_git\UnitTest\obj\Debug\UnitTest.pdb
+E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\log4net.dll
+E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\Topshelf.Log4Net.dll
+E:\百年\sourceCode\sys_kinghan_git\UnitTest\bin\Debug\log4net.xml
